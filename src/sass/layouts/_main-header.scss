@@ -1,0 +1,237 @@
+.header {
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: rgb(14, 15, 18);
+}
+
+.header__width-container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 37px 20px 27px 20px;
+
+  @media screen and (min-width: 768px) {
+    width: 768px;
+    padding: 37px 32px 27px 32px;
+  }
+  @media screen and (min-width: 1280px) {
+    width: 1280px;
+  }
+  @media screen and (min-width: 1600px) {
+    width: 1600px;
+  }
+}
+
+.header--main {
+  background-image: url('/src/images/main-header/mobile.jpg');
+  
+  @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+      background-image: url('/src/images/main-header/mobile@2x.jpg');
+    }
+  
+    @media screen and (min-width: 768px) {
+      background-image: url('/src/images/main-header/tablet.jpg');
+  
+      @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+        background-image: url('/src/images/main-header/tablet@2x.jpg');
+      }
+    }
+  
+    @media screen and (min-width: 1280px) {
+      background-image: url('/src/images/main-header/pc.jpg');
+  
+      @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+        background-image: url('/src/images/main-header/pc@2x.jpg');
+      }
+    }
+}
+
+.header__container {
+  display: flex;
+  align-items:center;
+  justify-content: space-between;
+  margin-right: auto;
+  margin-bottom: 53px;
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 45px;
+  }
+}
+
+.logo {
+  display: block;
+  text-decoration: none;
+
+  &__icon {
+    width: 24px;
+    height: 24px;
+  }
+  
+  @media screen and (min-width: 768px) {
+    display: flex;
+    align-items: center;
+
+    &__icon {
+      margin-right: 12px;
+      }
+    }
+}
+
+.filmoteka {
+  display: none;
+
+  @media screen and (min-width: 768px) {
+    display: block;
+    font-family: 'Roboto';
+    @include font(30px, 500, 35px);
+    color: #ffffff;
+  }
+}
+
+.nav__container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: baseline;
+}
+
+.header__nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: baseline;
+}
+
+.header__menu {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  justify-content: end;
+  text-transform: uppercase;
+}
+
+.menu__link {
+  position: relative;
+  padding-bottom: 2px;
+  padding-top: 5px;
+  color: inherit;
+  text-decoration: none;
+  font-family: 'Roboto';
+  @include font(12px, 500, 14px);
+  color: #ffffff;
+}
+
+.menu__item:not(:last-child) {
+  margin-right: 27px;
+
+  @media screen and (min-width: 768px) {
+    margin-right: 40px;
+  }
+}
+
+.menu__button {
+  margin-left: 27px;
+  padding: 10px 0px;
+  color: white;
+  @include font(12px, 500, 14px);
+  text-transform: uppercase;
+
+  @media screen and (min-width: 768px) {
+    margin-left: 40px;
+  }
+}
+
+.form {
+  height: 20px;
+  margin: 0 auto;
+  margin-bottom: 40px;
+  text-align: center;
+  max-width: 336px;
+
+  @media screen and (min-width: 768px) {
+      margin-bottom: 24px;
+    }
+
+  @media screen and (min-width: 1280px) {
+      max-width: 394px;
+  }
+}
+
+.search {
+  color: $header-white-color;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  border-bottom: 0.5px solid #ffffff;
+  width: 100%;
+  &-wrapper {
+    position: relative;
+  }
+  &__icon {
+    width: 12px;
+    height: 12px;
+  }
+  &__submit {
+    position: absolute;
+    background-color: transparent;
+    right: 0;
+    bottom: 0;
+    padding: 0;
+  }
+  &:hover, 
+  &:focus {
+    outline: none;
+  }
+
+  &::placeholder {
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    color: #ffffff;
+    opacity: 1;
+    padding-left: 2px;
+  }
+
+  &:focus::placeholder {
+    opacity: 0;
+    transition: opacity 0.7s $primary-cubic;
+  }
+}
+
+.active::after {
+  position: absolute;
+  content: '';
+  background-color: #ff001b;
+  width: 100%;
+  height: 3px;
+  bottom: -2px;
+  left: 0;
+}
+
+.logo__icon {
+  animation: spin 8s linear infinite alternate-reverse;
+  -webkit-animation: spin 8s linear infinite alternate-reverse;
+}
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
