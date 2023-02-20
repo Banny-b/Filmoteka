@@ -39,10 +39,7 @@
     background-color: #F7F7F7;
     width: 40px;
             height: 40px;
-            // margin: 5px;
             background-position: center;
-    //         border: none;
-    //         background-color: #fff;
             transition: background-color 0.25s ease-in;
             border-radius: 5px;
     
@@ -61,10 +58,8 @@
     width: 10px;
     height: 1.4px;
     background-color: $card-text-color;
-    // background-image: url('../../images/pagination/arrow-left.svg');
-            background-repeat: no-repeat;
-            background-position: 50%;
-            
+    background-repeat: no-repeat;
+    background-position: 50%;
     left: 15px;
     display: block;
     
@@ -78,7 +73,6 @@
     top: 2px;
     right: 5px;
     background-color: $card-text-color;
-    
     transform: rotate(45deg);
 }
 
@@ -105,7 +99,6 @@
         background-color: #F7F7F7;
         width: 40px;
         height: 40px;
-        // margin: 5px;
         background-position: center;
         transition: background-color 0.25s ease-in;
         border-radius: 5px;
@@ -126,9 +119,6 @@
     background-color: $card-text-color;
     left: 15px;
     display: block;
-  
-
-
 }
 
 .tui-ico-next::before {
@@ -152,5 +142,3 @@
     background-color: $card-text-color;
     transform: rotate(-45deg);
 }
-
-

@@ -38,4 +38,4 @@ export function createGallery(film) {
         </li>`;
     })
     .join('');
-}
+};

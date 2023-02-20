@@ -1,6 +1,5 @@
 export const refs = {
   searchForm: document.querySelector('.form'),
-  // filmsGallery: document.querySelector('.movies__list'),
   gallery: document.querySelector('.movies__list'),
   pagination: document.getElementById('tui-pagination-container'),
   movieCard: document.querySelector('.movies__item'),
@@ -9,6 +8,7 @@ export const refs = {
   closeModalIcon: document.querySelector('.close-modal'),
   input: document.querySelector('.header__toggle-input'),
   body: document.querySelector('body'),
+  // filmsGallery: document.querySelector('.movies__list'),
 
   //library
   library: document.querySelector('.library__list'),

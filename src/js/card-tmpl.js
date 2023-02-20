@@ -10,10 +10,10 @@ export default function trendMovieCardTmpl({
   // рік виходу фільма
   let releaseYear = release_date.slice(0, 4);
 
-  //посилання на постер, поки що без варіантів для різних медіа
+  // посилання на постер, поки що без варіантів для різних медіа
   const posterUrl = 'https://image.tmdb.org/t/p/w500/' + poster_path;
 
-  //підставити замість кодів жанрів назви жанрів
+  // підставити замість кодів жанрів назви жанрів
   let convertedGenres = createGenresMarkup(genre_ids);
 
   return `<li class="movies__item" data-id="${id}">
@@ -27,4 +27,4 @@ export default function trendMovieCardTmpl({
 
         </div>
     </li>`;
-}
+};

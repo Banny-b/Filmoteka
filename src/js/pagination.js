@@ -1,9 +1,9 @@
 import Pagination from 'tui-pagination';
-// import 'tui-pagination/dist/tui-pagination.css';
 import { refs } from './refs';
 import { FilmsApiService } from './api-service';
 import { createMovieCard } from './get-trend-movies';
 import { createGallery } from './create-search-gallery';
+// import 'tui-pagination/dist/tui-pagination.css';
 
 const filmsApiService = new FilmsApiService();
 
@@ -17,7 +17,7 @@ function pagination() {
     firstItemClassName: 'tui-first-child',
     lastItemClassName: 'tui-last-child',
   };
-   if (window.innerWidth <= 480) {
+    if (window.innerWidth <= 480) {
     options.visiblePages = 3;
   } else {
     options.visiblePages = 5;
@@ -60,7 +60,6 @@ function paginationOnQuery() {
     });
   });
 
-    }
-
+    };
 
 export { pagination, paginationOnQuery };

@@ -1,5 +1,5 @@
 .header {
-  //відступ до секції
+  // відступ до секції
   margin-bottom: 20px;
   @media screen and (min-width: 768px) {
     margin-bottom: 60px;
@@ -80,8 +80,8 @@
 
   &:hover,
   &:focus {
-    // box-shadow: 0 1px 7px 2px rgb(110 98 140 / 76%);
     transform: scale(1.03);
+    // box-shadow: 0 1px 7px 2px rgb(110 98 140 / 76%);
   }
 
   &:hover .movies__poster,
@@ -100,11 +100,9 @@
   transition: box-shadow 0.3s $primary-cubic;
 }
 
-
 .movies__poster {
   width: 100%;
   margin-bottom: 10px;
-
   border-radius: 5px;
   cursor: pointer;
   

@@ -1,7 +1,6 @@
 import { Notify } from 'notiflix';
 import { refs } from './refs';
 import { FilmsApiService } from './api-service';
-// import { paginationOnQuery } from './pagination';
 import { createGallery } from './create-search-gallery';
 
 import Loading from './spinner';
@@ -77,4 +76,4 @@ async function paginationOnQuery() {
       refs.gallery.innerHTML = createGallery(films.results);
     });
   });
-}
+};

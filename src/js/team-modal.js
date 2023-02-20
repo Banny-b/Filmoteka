@@ -61,4 +61,4 @@ function onBackdroTeampClick(event) {
     body.classList.remove('modal-open');
     backdropteam.classList.add('visually-hidden');
   }
-}
+};

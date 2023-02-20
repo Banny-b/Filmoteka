@@ -14,4 +14,3 @@ import './js/dark-theme';
 import topUp from './js/top';
 
 topUp();
-

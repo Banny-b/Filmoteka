@@ -33,4 +33,4 @@ export default function closeModalWindow() {
   enableBodyScroll(refs.movieModal);
   refs.movieModal.innerHTML = '';
   document.addEventListener('click', openMovieModal);
-}
+};

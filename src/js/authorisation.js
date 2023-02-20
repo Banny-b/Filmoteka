@@ -49,7 +49,22 @@ if (userUid != null && signOutBtn.classList.contains('is-hidden')) {
   signOutBtn.classList.remove('is-hidden');
   logInBtn.classList.add('is-hidden');
 }
-
+if (!userUid) {
+  if (!localStorage.getItem('watchedMovies')) {
+    localStorage.setItem('watchedMovies', '[]');
+    filmsInWatched = [];
+  }
+  if (!localStorage.getItem('queueMovies')) {
+    localStorage.setItem('queueMovies', '[]');
+    filmsInQueue = [];
+  }
+}
+if (localStorage.getItem('queueMovies') === '[]') {
+  filmsInQueue = [];
+}
+if (localStorage.getItem('watchedMovies') === '[]') {
+  filmsInWatched = [];
+}
 registrationForm.addEventListener('submit', async e => {
   e.preventDefault();
   const {
@@ -148,6 +163,8 @@ signOutBtn.addEventListener('click', e => {
       localStorage.removeItem('uid');
       localStorage.setItem('watchedMovies', '[]');
       localStorage.setItem('queueMovies', '[]');
+      filmsInQueue = [];
+      filmsInWatched = [];
       // Sign-out successful.
     })
     .catch(error => {
@@ -177,112 +194,3 @@ authCloseBtn.addEventListener('click', e => {
     registrationForm.classList.add('is-hidden');
   }
 });
-
-function setQueuedFilm(filmId) {
-  getQueuedFilms();
-  let queuedFilms = JSON.parse(filmsInQueue);
-
-  queuedFilms.push(filmId);
-  let strQueuedFilms = JSON.stringify(queuedFilms);
-
-  const newQueuedFilmRef = ref(database, 'users/' + userUid);
-  update(newQueuedFilmRef, {
-    queuedFilms: strQueuedFilms,
-  })
-    .then(() => {
-      alert('success');
-    })
-    .catch(error => {
-      alert(error);
-    });
-}
-
-function getQueuedFilms() {
-  const queuedFilmsListRef = ref(database, 'users/' + userUid);
-  onValue(queuedFilmsListRef, snapshot => {
-    const data = snapshot.val();
-    filmsInQueue = data.queuedFilms;
-    localStorage.setItem('queueMovies', filmsInQueue);
-  });
-}
-
-function removeQueuedFilm(filmId) {
-  getQueuedFilms();
-  let queuedFilms = JSON.parse(filmsInQueue);
-  queuedFilms.splice(queuedFilms.indexOf(filmId), 1);
-  let strQueuedFilms = JSON.stringify(queuedFilms);
-  const newQueuedFilmRef = ref(database, 'users/' + userUid);
-  update(newQueuedFilmRef, {
-    queuedFilms: strQueuedFilms,
-  })
-    .then(() => {
-      alert('success');
-    })
-    .catch(error => {
-      alert(error);
-    });
-}
-
-// firstBtn.addEventListener("click", (e) => {
-//     e.preventDefault();
-//     setQueuedFilm(122313);
-//     setQueuedFilm(442313);
-//     setQueuedFilm(333);
-//     console.log(filmsInQueue);
-// })
-
-// secondBtn.addEventListener("click", (e) => {
-//     e.preventDefault();
-//     removeQueuedFilm(122313);
-// })
-
-// thirdBtn.addEventListener("click", (e) => {
-//     e.preventDefault();
-//     getQueuedFilms();
-//     console.log(filmsInQueue);
-// })
-
-function setWatchedFilm(filmId) {
-  getWatchedFilms();
-  let watchedFilms = JSON.parse(filmsInWatched);
-
-  watchedFilms.push(filmId);
-  let strWatchedFilms = JSON.stringify(watchedFilms);
-
-  const newWatchedFilmRef = ref(database, 'users/' + userUid);
-  update(newWatchedFilmRef, {
-    watchedFilms: strWatchedFilms,
-  })
-    .then(() => {
-      alert('success');
-    })
-    .catch(error => {
-      alert(error);
-    });
-}
-
-function getWatchedFilms() {
-  const watchedFilmsListRef = ref(database, 'users/' + userUid);
-  onValue(watchedFilmsListRef, snapshot => {
-    const data = snapshot.val();
-    filmsInWatched = data.watchedFilms;
-    localStorage.setItem('watchedMovies', filmsInWatched);
-  });
-}
-
-function removeWatchedFilm(filmId) {
-  getWatchedFilms();
-  let watchedFilms = JSON.parse(filmsInWatched);
-  watchedFilms.splice(watchedFilms.indexOf(filmId), 1);
-  let strWatchedFilms = JSON.stringify(watchedFilms);
-  const newWatchedFilmRef = ref(database, 'users/' + userUid);
-  update(newWatchedFilmRef, {
-    watchedFilms: strWatchedFilms,
-  })
-    .then(() => {
-      alert('success');
-    })
-    .catch(error => {
-      alert(error);
-    });
-}

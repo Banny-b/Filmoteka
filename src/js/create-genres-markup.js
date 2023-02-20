@@ -38,4 +38,4 @@ export default function createGenresMarkup(genre_ids) {
     genresMarkup.push(`${convertedGenres[0]}, ${convertedGenres[1]}, Other`);
   }
   return genresMarkup;
-}
+};

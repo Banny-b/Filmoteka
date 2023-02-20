@@ -12,8 +12,7 @@
       rgba(30, 48, 30, 0.1)
     ),
     linear-gradient(180deg, #ffba08, #ff1b3a, #370617);
-
-  //   border: 1px solid #ff6b08;
+  // border: 1px solid #ff6b08;
   border-radius: 50%;
   justify-content: center;
   align-items: center;
@@ -33,6 +32,7 @@
     visibility: visible;
   }
 }
+
 .scroll-icon {
   fill: currentColor;
   transition: all cubic-bezier(0.4, 0, 0.2, 1);

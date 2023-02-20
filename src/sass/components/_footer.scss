@@ -13,7 +13,6 @@
 
   // PC
   @media screen and (min-width: 1200px) {
-    // margin-bottom: 29px;
     display: flex;
     justify-content: center;
   }
@@ -47,12 +46,10 @@
   }
 }
 
-
 .footer__heart {
   margin-left: 10px;
   margin-right: 10px;
 }
-
 
 .footer__icon-b {
     animation: beat-y 0.8s linear infinite alternate-reverse;
@@ -110,7 +107,6 @@
   }
   }
 
-
   .footer__icon-y {
     animation: beat-y 0.8s linear infinite alternate;
     -webkit-animation: beat-y 0.8s linear infinite alternate;
@@ -141,4 +137,3 @@
 .goit-students {
   color: black;
 }
-

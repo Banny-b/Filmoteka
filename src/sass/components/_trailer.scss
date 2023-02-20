@@ -21,7 +21,6 @@
     &:focus {
       opacity: 0.8;
     }
-
     @include for-tablet{
       padding: 10px 120px;
       }
@@ -33,7 +32,6 @@
     position: absolute;
     bottom: 12px;
     left: 20%;
-   
     z-index: 1002;
     border-radius: 5px;
     padding: 4px 10px;
@@ -45,19 +43,16 @@
     &:focus {
       opacity: 1;
     }
-
     @include for-tablet{
       bottom: 10px;
     left: 45%;
     }
-
     @include for-desktop{
       bottom: 10px;
     left: 45%;
     }
   }
   &__button{
-
     @include for-phone{display: flex;
     justify-content: center;
     margin-bottom: 20px;

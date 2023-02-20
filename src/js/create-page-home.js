@@ -1,9 +1,8 @@
-// import { refs } from './refs';
 import { pagination } from './pagination';
-// import { showPagination } from './pagination';
 import { createMovieCard } from './get-trend-movies';
 import { FilmsApiService } from './api-service';
 import Loading from './spinner';
+// import { showPagination } from './pagination';
 
 import Pagination from 'tui-pagination';
 
@@ -25,4 +24,4 @@ function uploadTrendMovies() {
     })
     .finally(() => Loading.remove());
   pagination();
-}
+};

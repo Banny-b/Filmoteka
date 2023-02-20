@@ -27,4 +27,4 @@ function loadTheme() {
   } else {
     refs.body.classList.add(Theme.LIGHT);
   }
-}
+};
