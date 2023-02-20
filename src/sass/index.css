@@ -716,13 +716,16 @@ body {
     padding: 40px 36px;
     gap: 68px;
   }
+
   .movie__wrapper {
     width: 264px;
   }
+
   .movie__img {
     width: 264px;
     height: 373px;
   }
+
   .movie__header {
     font-size: 20px;
     font-weight: 500;
@@ -735,18 +738,22 @@ body {
     gap: 16px;
     padding: 40px 12px;
   }
+
   .movie__wrapper {
     width: 50%;
   }
+
   .movie__img {
     width: 375px;
     height: 478px;
   }
+
   .movie__header {
     font-size: 30px;
     font-weight: 500;
     line-height: 1.1666666667;
   }
+
   .movie__buttons-wrapper {
     justify-content: start;
     padding-left: 8px;

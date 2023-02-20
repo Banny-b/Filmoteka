@@ -13,13 +13,13 @@
   &__play {
     padding: 10px 105px;
     opacity: 0.5;
-    border-radius: 10px;
-    background-color: $reactangle-color;
+    border-radius: 0 0 10px 10px;
+    background-color: $card-text-accent;
     color: $header-white-color;
     transition: opacity $primary-cubic 250ms;
     &:hover,
     &:focus {
-      opacity: 0.8;
+      opacity: 0.9;
     }
     @include for-tablet{
       padding: 10px 120px;
@@ -33,10 +33,10 @@
     bottom: 12px;
     left: 20%;
     z-index: 1002;
-    border-radius: 5px;
+    border-radius: 1px;
     padding: 4px 10px;
     opacity: 0.7;
-    background-color: $reactangle-color;
+    background-color: $footer-text-color;
     color: $header-white-color;
     transition: opacity $primary-cubic 250ms;
     &:hover,
